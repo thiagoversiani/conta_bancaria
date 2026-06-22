@@ -2,6 +2,7 @@ package conta_bancaria;
 
 import java.util.Scanner;
 
+import conta_bancaria.model.Conta;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -10,6 +11,45 @@ public class Menu {
 		Scanner leia = new Scanner(System.in);
 
 		int opcao;
+		
+		/* Instanciar Objetos da Classe Conta */
+		
+		Conta c1 = new Conta (1, 123, 1, "Isabella", 200000.00f);
+		c1.visualizar();
+		
+		Conta c2 = new Conta (2, 123, 2, "Thiago", 400000.00f);
+		c2.visualizar();
+		
+		//alteração do saldo
+		c1.setSaldo(300000);
+		c1.visualizar();
+		
+		c2.visualizar();
+		
+		/*Deposito na conta c2 */
+		
+		c2.depositar(50000.00f);
+		c2.visualizar();
+		
+		/* if ternário
+		 * 
+		 * Saque na conta c2
+		 * condição ? opção se for verdade  : opção se for mentira*/ 
+		
+		
+		System.out.println("Sacar RS 300.000,00 da conta c1: " + (c1.sacar(200000.00f)  ?  
+				"Saque efetuado com sucesso!"  :   "Saldo Insuficiente"));
+		
+		System.out.println("Sacar RS 300.000,00 da conta c2: " + (c2.sacar(200000.00f)  ?  
+				"Saque efetuado com sucesso!"  :   "Saldo Insuficiente"));
+		
+		//aqui é para mostrar o saldo depois do saque
+		c1.visualizar();
+		c2.visualizar();
+		
+		
+
+
 
 		while (true) {
 
@@ -35,6 +75,8 @@ public class Menu {
 			System.out.println("                                                     " + Cores.TEXT_RESET);
 
 			opcao = leia.nextInt();
+			
+			
 
 			if (opcao == 0) {
 				System.out.println(Cores.TEXT_WHITE_BOLD + "\nBanco do Brazil com Z - O seu Futuro começa aqui!");
