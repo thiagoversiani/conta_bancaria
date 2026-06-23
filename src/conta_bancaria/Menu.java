@@ -3,6 +3,7 @@ package conta_bancaria;
 import java.util.Scanner;
 
 import conta_bancaria.model.Conta;
+import conta_bancaria.model.ContaCorrente;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -15,21 +16,21 @@ public class Menu {
 		/* Instanciar Objetos da Classe Conta */
 		
 		Conta c1 = new Conta (1, 123, 1, "Isabella", 200000.00f);
-		c1.visualizar();
+		//c1.visualizar();
 		
 		Conta c2 = new Conta (2, 123, 2, "Thiago", 400000.00f);
-		c2.visualizar();
+		//c2.visualizar();
 		
 		//alteração do saldo
-		c1.setSaldo(300000);
-		c1.visualizar();
+		//c1.setSaldo(300000);
+		//c1.visualizar();
 		
-		c2.visualizar();
+		//c2.visualizar();
 		
 		/*Deposito na conta c2 */
 		
-		c2.depositar(50000.00f);
-		c2.visualizar();
+		//c2.depositar(50000.00f);
+		//c2.visualizar();
 		
 		/* if ternário
 		 * 
@@ -44,11 +45,19 @@ public class Menu {
 				"Saque efetuado com sucesso!"  :   "Saldo Insuficiente"));
 		
 		//aqui é para mostrar o saldo depois do saque
-		c1.visualizar();
-		c2.visualizar();
+		//c1.visualizar();
+		//c2.visualizar();
 		
+		//instanciar Objeto da Classe ContaCorrente
 		
-
+		ContaCorrente cc1 = new ContaCorrente(3, 789, 1, "Raquel", 200000.00f, 2000.00f);
+		cc1.visualizar();
+		
+		System.out.println("\nSacar RS 202.000,00 da conta cc1: " + (cc1.sacar(202000.00f)  ?  
+				"Saque efetuado com sucesso!" + cc1.getSaldo() :   "Saldo Insuficiente"));
+		
+		cc1.depositar(2000.00f);
+		cc1.visualizar();
 
 
 		while (true) {
