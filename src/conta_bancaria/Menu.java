@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import conta_bancaria.model.Conta;
 import conta_bancaria.model.ContaCorrente;
+import conta_bancaria.model.ContaPoupança;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -50,15 +51,23 @@ public class Menu {
 		
 		//instanciar Objeto da Classe ContaCorrente
 		
-		ContaCorrente cc1 = new ContaCorrente(3, 789, 1, "Raquel", 200000.00f, 2000.00f);
-		cc1.visualizar();
+		//ContaCorrente cc1 = new ContaCorrente(3, 789, 1, "Raquel", 200000.00f, 2000.00f);
+		//cc1.visualizar();
 		
-		System.out.println("\nSacar RS 202.000,00 da conta cc1: " + (cc1.sacar(202000.00f)  ?  
-				"Saque efetuado com sucesso!" + cc1.getSaldo() :   "Saldo Insuficiente"));
+		//System.out.println("\nSacar RS 202.000,00 da conta cc1: " + (cc1.sacar(202000.00f)  ?  
+				//"Saque efetuado com sucesso!" + cc1.getSaldo() :   "Saldo Insuficiente"));
 		
-		cc1.depositar(2000.00f);
-		cc1.visualizar();
-
+		//cc1.depositar(2000.00f);
+		//cc1.visualizar();
+		
+		//instanciar Objeto da Classe ContaCorrente
+		
+		ContaPoupança cp1 = new ContaPoupança(3, 123, 1, "Thiago", 300000.00f, 5);
+		cp1.visualizar();
+		
+		System.out.println("\nSacar RS 200.000,00 da conta cp1: " + (cp1.sacar(200000.00f)  ?  
+				"Saque efetuado com sucesso!\n" + "Saldo atual: " + cp1.getSaldo() :   "Saldo Insuficiente"));
+		cp1.visualizar();
 
 		while (true) {
 
