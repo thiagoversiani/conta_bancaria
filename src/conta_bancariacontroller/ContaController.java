@@ -17,6 +17,7 @@ public class ContaController implements ContaRepository{
 		for(var conta : listaContas) {
 			conta.visualizar();
 		}
+		
 	}
 
 	@Override
