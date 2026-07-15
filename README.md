@@ -374,7 +374,7 @@ Para executar os códigos localmente, você precisará de:
 
 &#x20;
 
-1\. Clone o repositório do Projeto \[Conta Bancária](https://github.com/rafaelq80/conta\_bancaria) dentro da pasta do \*Workspace\* do Eclipse/STS
+1\. Clone o repositório do Projeto \[Conta Bancária](https://github.com/thiagoversiani/conta_bancaria/) dentro da pasta do \*Workspace\* do Eclipse/STS
 
 &#x20;
 
@@ -382,7 +382,7 @@ Para executar os códigos localmente, você precisará de:
 
 
 
-git clone https://github.com/rafaelq80/conta\_bancaria.git
+git clone https://github.com/thiagoversiani/conta_bancaria/
 
 
 
@@ -482,7 +482,7 @@ Este repositório é parte de um projeto educacional, mas contribuições são s
 
 &#x20;
 
-Desenvolvido por \[\*\*Rafael\*\*](https://github.com/rafaelq80)
+Desenvolvido por \[\*\*Thiago\*\*](https://github.com/thiagoversiani/)
 
 
 
